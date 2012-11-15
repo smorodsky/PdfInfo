@@ -1,4 +1,28 @@
 h2. PdfInfo.jsx
 
-This module is used to read the extended file information about PDF. Typical use in ExtendScript for InDesign. In any case, need to have installed Acrobat Pro. Tested on Mac and Windows. The module contains a single function "PdfInfo". If successful, it returns an array with the number of elements by appropriate number of pages in the PDF. Each element has information about the size of page boxes measured in points.Returned array:<pre><code>[	{                                 // - beginning info of the page 0			cropBox:  [ 0, 130, 170,  0], // - box values:		bleedBox: [27, 121, 134, 18], // left, top, right, bottom		trimBox:  [30, 120, 130, 20], // in points,		artBox:   [ 0, 130, 170,  0]  // measured at the lower left corner			},                                // - end page 0	{                                 // - beginning info of the page 1.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .	}                                 // - end last page	]
+This module is used to read the extended file information about PDF. 
+Typical use in ExtendScript for InDesign. In any case, need to have 
+installed Acrobat Pro. Tested on Mac and Windows. 
+
+The module contains a single function "PdfInfo". If successful, it 
+returns an array with the number of elements by appropriate number 
+of pages in the PDF. Each element has information about the size of 
+page boxes measured in points.
+
+Returned array:
+
+<pre><code>
+[
+	{                                 // - beginning info of the page 0
+	
+		cropBox:  [ 0, 130, 170,  0], // - box values:
+		bleedBox: [27, 121, 134, 18], // left, top, right, bottom
+		trimBox:  [30, 120, 130, 20], // in points,
+		artBox:   [ 0, 130, 170,  0]  // measured at the lower left corner
+		
+	},                                // - end page 0
+	{                                 // - beginning info of the page 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+	}                                 // - end last page	
+]
 </code></pre>
